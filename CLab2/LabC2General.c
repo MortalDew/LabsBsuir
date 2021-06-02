@@ -22,7 +22,7 @@ a:   scanf_s("%d", &n);
 	}
 
 	printf("\n");
-	printf("enter the number of numbers   ");
+	printf("enter the number of checks   ");
 
 b:   scanf_s("%d", &xn);
 
