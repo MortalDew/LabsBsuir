@@ -26,7 +26,7 @@ void buisness(char a, char b, int c, int d);
 void main()
 {
 	int choose;
-	Data data[2];
+	Data data[2] = {NULL, NULL};
 	while (true)
 	{
 		printMenu();
@@ -51,42 +51,57 @@ void main()
 		}
 		case 3:
 		{
-			data[0].zodiac = zodiacDefinition(data[0].day_of_birth, data[0].month_of_birth);
-			outputZodiac(data[0].zodiac);
-			data[1].zodiac = zodiacDefinition(data[1].day_of_birth, data[1].month_of_birth);
-			outputZodiac(data[1].zodiac);
-
+			if (data[0].zodiac != NULL && data[1].zodiac != NULL)
+			{
+				data[0].zodiac = zodiacDefinition(data[0].day_of_birth, data[0].month_of_birth);
+				outputZodiac(data[0].zodiac);
+				data[1].zodiac = zodiacDefinition(data[1].day_of_birth, data[1].month_of_birth);
+				outputZodiac(data[1].zodiac);
+			}
+			else printf("\nEnter both\n\n");;
 			break;
 		}
 		case 4:
 		{
-			data[0].element = zodiacElement(data[0].zodiac);
-			data[1].element = zodiacElement(data[1].zodiac);
-			if (data[0].element == data[1].element)
+			if (data[0].zodiac != NULL && data[1].zodiac != NULL)
 			{
-				printf("Yes.\n");
+				data[0].element = zodiacElement(data[0].zodiac);
+				data[1].element = zodiacElement(data[1].zodiac);
+				if (data[0].element == data[1].element)
+				{
+					printf("Yes.\n");
+				}
+				else
+				{
+					printf("No\n");
+				}
 			}
-			else
-			{
-				printf("No\n");
-			}
+			else printf("\nEnter both\n\n");;
 			break;
 		}
 		case 5:
 		{
-			if ((data[0].zodiac == data[1].zodiac) || (abs(data[0].zodiac - data[1].zodiac) == 6))
+			if (data[0].zodiac != NULL && data[1].zodiac != NULL)
 			{
-				printf("Yes.\n");
+				if ((data[0].zodiac == data[1].zodiac) || (abs(data[0].zodiac - data[1].zodiac) == 6))
+				{
+					printf("Yes.\n");
+				}
+				else
+				{
+					printf("No.\n");
+				}
 			}
-			else
-			{
-				printf("No.\n");
-			}
+			else printf("Enter both\n\n");;
 			break;
 		}
 		case 6:
 		{
-			buisness(data[0].sex, data[1].sex, zodiacElement(data[0].zodiac), zodiacElement(data[1].zodiac));
+			if (data[0].zodiac != NULL && data[1].zodiac != NULL)
+			{
+				buisness(data[0].sex, data[1].sex, zodiacElement(data[0].zodiac), zodiacElement(data[1].zodiac));
+			}
+			else printf("\nEnter both\n\n");;
 			break;
 		}
 		case 7:
@@ -129,7 +144,7 @@ void printMenu()
 	printf("4.Friendship?\n");
 	printf("5.Buisness?\n");
 	printf("6.Marriage?\n");
-	printf("7.Version and creator.\n");
+	printf("7.Version\n");
 	printf("8.Exit.\n");
 }
 
@@ -327,7 +342,7 @@ int zodiacDefinition(int a, int b)
 
 void Goroskoper()
 {
-	printf("Goroskoper v1.1\n");
+	printf("Goroskoper v2.2\n");
 	return;
 }
 
@@ -337,7 +352,7 @@ int checkInt()
 	bool incorrectInput = true;
 	int a;
 	rewind(stdin);
-	while (!scanf_s("%d", &a) || a<1 || a>31)
+	while (!scanf_s("%d", &a) || a < 1 || a>31)
 	{
 		rewind(stdin);
 		printf("Incorrect input. Input m: ");
