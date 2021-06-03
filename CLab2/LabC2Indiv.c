@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <cmath>
 
 struct Data
@@ -26,11 +27,13 @@ void buisness(char a, char b, int c, int d);
 void main()
 {
 	int choose;
-	Data data[2] = {NULL, NULL};
+	bool Person1 = false, Person2 = false;
+	Data data[2] = { NULL, NULL };
 	while (true)
 	{
 		printMenu();
 		choose = checkInt();
+		system("cls");
 		switch (choose)
 		{
 		case 1:
@@ -39,6 +42,7 @@ void main()
 			data[0].day_of_birth = checkInt();
 			data[0].month_of_birth = checkInt();
 			data[0].sex = checkChar();
+			Person1 = true;
 			break;
 		}
 		case 2:
@@ -47,23 +51,30 @@ void main()
 			data[1].day_of_birth = checkInt();
 			data[1].month_of_birth = checkInt();
 			data[1].sex = checkChar();
+			Person2 = true;
 			break;
 		}
 		case 3:
 		{
-			if (data[0].zodiac != NULL && data[1].zodiac != NULL)
 			{
-				data[0].zodiac = zodiacDefinition(data[0].day_of_birth, data[0].month_of_birth);
-				outputZodiac(data[0].zodiac);
-				data[1].zodiac = zodiacDefinition(data[1].day_of_birth, data[1].month_of_birth);
-				outputZodiac(data[1].zodiac);
-			}
-			else printf("\nEnter both\n\n");;
+				if (Person1 == true)
+				{
+					data[0].zodiac = zodiacDefinition(data[0].day_of_birth, data[0].month_of_birth);
+					outputZodiac(data[0].zodiac);
+				}
+				if (Person2 == true)
+				{
+					data[1].zodiac = zodiacDefinition(data[1].day_of_birth, data[1].month_of_birth);
+					outputZodiac(data[1].zodiac);
+				}
+				if (Person1 == false && Person2 == false)
+					printf("\nEnter at least one\n");
+			};
 			break;
 		}
 		case 4:
 		{
-			if (data[0].zodiac != NULL && data[1].zodiac != NULL)
+			if (Person1 == true && Person2 == true)
 			{
 				data[0].element = zodiacElement(data[0].zodiac);
 				data[1].element = zodiacElement(data[1].zodiac);
@@ -76,12 +87,12 @@ void main()
 					printf("No\n");
 				}
 			}
-			else printf("\nEnter both\n\n");;
+			else printf("\nEnter both\n");;
 			break;
 		}
 		case 5:
 		{
-			if (data[0].zodiac != NULL && data[1].zodiac != NULL)
+			if (Person1 == true && Person2 == true)
 			{
 				if ((data[0].zodiac == data[1].zodiac) || (abs(data[0].zodiac - data[1].zodiac) == 6))
 				{
@@ -92,16 +103,16 @@ void main()
 					printf("No.\n");
 				}
 			}
-			else printf("Enter both\n\n");;
+			else printf("Enter both\n");;
 			break;
 		}
 		case 6:
 		{
-			if (data[0].zodiac != NULL && data[1].zodiac != NULL)
+			if (Person1 == true && Person2 == true)
 			{
 				buisness(data[0].sex, data[1].sex, zodiacElement(data[0].zodiac), zodiacElement(data[1].zodiac));
 			}
-			else printf("\nEnter both\n\n");;
+			else printf("\nEnter both\n");;
 			break;
 		}
 		case 7:
@@ -137,7 +148,7 @@ void buisness(char a, char b, int c, int d)
 
 void printMenu()
 {
-	printf("Choose any option:\n");
+	printf("\nChoose any option:\n");
 	printf("1.Input 1st member.\n");
 	printf("2.Input 2st member.\n");
 	printf("3.Finding of the zodiac sign.\n");
