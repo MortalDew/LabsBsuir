@@ -22,5 +22,5 @@ jobs:
       run: make distcheck
     - name: Test
       run:
-        LabC1.c 
-        gcc –o LabC1 LabC1.c
+        CLab1/LabC1.c 
+        gcc –o LabC1 CLab1/LabC1.c
