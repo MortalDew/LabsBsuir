@@ -1,16 +1,3 @@
-all: 
-	build clean run
-
-build:
-	LabC1.o
-	gcc LabC1.o -o LabC1
-
-Lab5.o: 
-	LabC1.c
-	gcc -c LabC1.c -lm -std=c89
-
-clean: 
-	del LabC1.o
-
-run: 
+all:
+	gcc LabC1.c -o LabC1 -lm -std=c89
 	./LabC1.exe
