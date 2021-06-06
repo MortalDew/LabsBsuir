@@ -1,3 +1,0 @@
-all:
-	gcc LabC1.c -o LabC1 -lm -std=c89
-	./LabC1.exe
