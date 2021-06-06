@@ -3,7 +3,7 @@ all:
 
 build:
 	LabC1.o
-	gcc LabC1.o -o Lab5
+	gcc LabC1.o -o LabC1
 
 Lab5.o: 
 	LabC1.c
