@@ -7,7 +7,7 @@ int main()
     int n, i, c, ThisM;
     int wrong;
     printf("Enter to which number programm will work: "); 
-    printf("10000"); 
+    printf("\n10000\n\n"); 
     ThisM = 10000;
     for (int j = 3; j < ThisM; j++) {
         n = j;
