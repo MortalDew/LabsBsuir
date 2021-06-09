@@ -13,7 +13,8 @@ int main()
 	int n = 0, xn = 0; float x ; double l, y;
 
     printf(" enter the number of row members   ");
-a:   scanf("%d", &n);
+a:   //scanf("%d", &n);
+	n = 6;
 
 	if (n <= 0)
 	{
@@ -24,7 +25,8 @@ a:   scanf("%d", &n);
 	printf("\n");
 	printf("enter the number of checks   ");
 
-b:   scanf("%d", &xn);
+b:   //scanf("%d", &xn);
+	xn = 1;
 
 	if (xn <= 0)
 	{
@@ -38,7 +40,8 @@ b:   scanf("%d", &xn);
 		printf("0.1 ... 1" );
 		printf("\n"); 
 
-c:      scanf("%f",&x);
+c:      //scanf("%f",&x);
+	x = 0.1;
 
 		if (x < 0.1 || x>1)
 		{
