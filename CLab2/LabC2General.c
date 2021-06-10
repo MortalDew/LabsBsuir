@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include <cstdlib>
 #include "LabC2General.h"
 
 int fact(int n)
@@ -50,12 +51,7 @@ c:      scanf("%f",&x);
 		{
 			printf("\n");
 			printf(" error, enter right number  ");
-			loop++;
-			if (loop>200) {
-				x= 0.2;
-				break;
-			}
-			goto c;
+			x = (rand % 10)*0.1 + 0.1;
 		}
 
 		l = 0;
