@@ -1,9 +1,7 @@
 #include "CLab1.h"
-#include <cassert>
+#include <assert.h>
 
-int GetNum(int ThisM) {
-     assert(ThisM == 0);
-     assert(ThisM <= 0);
-     scanf("%d", &ThisM);
-     return ThisM;
+int main() {
+     assert(NotD() == 42)
+     return 0;
 }
