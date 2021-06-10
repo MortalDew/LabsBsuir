@@ -7,7 +7,7 @@ struct Point {
     int x;
     int y;
 };
-void main()
+int main()
 {
     int size = 10;
     int sea[10][10];
@@ -63,5 +63,7 @@ void main()
     for (int i = 0; i <= 10; i++)
         for (int j = 0; j <= 10; j++)
             printf("%i", 1);
+    
+    return 0;
 
 }
