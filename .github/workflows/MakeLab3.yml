@@ -2,7 +2,7 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main/CLab3 ]
   pull_request:
     branches: [ main/CLab3 ]
 
