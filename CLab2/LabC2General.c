@@ -63,6 +63,6 @@ c:      //scanf("%f",&x);
 		printf("%lf", y);
 		printf("\t%lf",l);
 	}
-	if (n>39) return 42;
+	if (n>2) return 42;
 		else return 0;
 }
