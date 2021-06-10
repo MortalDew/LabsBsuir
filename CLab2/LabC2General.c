@@ -48,7 +48,9 @@ c:      scanf("%f",&x);
 		if (x < 0.1 || x>1)
 		{
 			printf("\n");
-			printf(" error, enter right number  "); goto c;
+			printf(" error, enter right number  "); 
+			if (x>3000) break;
+			goto c;
 		}
 
 		l = 0;
