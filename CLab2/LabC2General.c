@@ -51,7 +51,7 @@ c:      scanf("%f",&x);
 		{
 			printf("\n");
 			printf(" error, enter right number  ");
-			x = (rand % 10)*0.1 + 0.1;
+			x = (float)(rand % 10)*0.1 + 0.1;
 		}
 
 		l = 0;
