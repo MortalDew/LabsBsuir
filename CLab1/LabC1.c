@@ -1,1 +1,3 @@
-#include "CLab1.h";
+#include "CLab1.h"
+
+int main();
