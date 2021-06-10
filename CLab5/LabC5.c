@@ -63,9 +63,11 @@ int main()
     Service* first = serv;
 
     printf("n=");
-    scanf_s("%d", &numberOfStructures);
+    numberOfStructures = 3;
+    //scanf_s("%d", &numberOfStructures);
     printf("max. time=");
-    scanf_s("%d", &maxSum);
+    maxSum = 100;
+    //scanf_s("%d", &maxSum);
     for (int i = 1; i < numberOfStructures; i++) {
 
         AddService(serv,i);
