@@ -1,0 +1,20 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main/CLab3 ]
+  pull_request:
+    branches: [ main/CLab3 ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: test and compile
+      run: |
+      
+        cd "CLab3"
+        make 
