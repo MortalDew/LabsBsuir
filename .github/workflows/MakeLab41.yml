@@ -16,5 +16,5 @@ jobs:
     - name: test and compile
       run: |
       
-        cd "Lab4/Lab41"
+        cd "Lab4"
         make 
