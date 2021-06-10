@@ -30,7 +30,7 @@ static char* word_end(char* s) {
 
 int main(void) {
     char* p, * w;
-    char s[256] = "app, abc, app, xyz, wolf, app.";
+    char s[256] = "app, abc, app, xyz, wolf, appd.";
 
     w = word_end(s);
     p = strtok(s, "., ");
