@@ -1,8 +1,9 @@
 #include "CLab1.h"
 #include <cassert>
 
-int main() {
-    int ThisM;
-    assert(ThisM = 10000);
-    return 0;       
+int GetNum(int ThisM) {
+     assert(ThisM == 0);
+     assert(ThisM <= 0);
+     scanf("%d", &ThisM);
+     return ThisM;
 }
