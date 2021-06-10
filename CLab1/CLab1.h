@@ -1,16 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int GetNum(int ThisM){
-    printf("Enter to which number programm will work: ");
-    scanf("%d", &ThisM);  
-    return ThisM;
-}
-
 int NotMain()
 {
     int array[100];
-    int n, i, c, ThisM;
+    int n, i, c, ThisM=0;
     int wrong;
     ThisM = GetNum(ThisM);
     for (int j = 3; j < ThisM; j++) {
