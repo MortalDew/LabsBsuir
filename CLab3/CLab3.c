@@ -27,7 +27,7 @@ void main()
         Point p = { rand() % (10 - t.x * (size - 1)+1),
             rand() % (10 - t.y * (size - 1)+1) };
         printf("pxy=%i,%i", p.x, p.y);
-        printf("txy=%i,%i", t.x, t.y);
+        printf("dtxy=%i,%i", t.x, t.y);
         system("pause");
         for (int i = p.x * t.x + p.y * t.y - 1;
             i < (p.x * t.x + p.y * t.y + size + 1);
