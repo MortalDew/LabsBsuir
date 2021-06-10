@@ -14,7 +14,8 @@ int DoLab()
 	int n = 0, xn = 0; float x ; double l, y;
 
     printf(" enter the number of row members   ");
-a:   scanf("%d", &n);
+a:   //scanf("%d", &n);
+	n=3;
 	
 
 	if (n <= 0)
