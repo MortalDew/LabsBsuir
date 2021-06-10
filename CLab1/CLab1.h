@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "test.c"
 #include <stdlib.h>
 
 int NotMain()
