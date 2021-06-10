@@ -44,14 +44,15 @@ b:   //scanf("%d", &xn);
 		printf("0.1 ... 1" );
 		printf("\n"); 
 
-c:      scanf("%f",&x);
+c:      //scanf("%f",&x);
+		x=0.2;
 
 
 		if (x < 0.1 || x>1)
 		{
 			printf("\n");
 			printf(" error, enter right number  ");
-			x = (float)rand() / (float)(10)+0.1;
+			goto c;
 		}
 
 		l = 0;
