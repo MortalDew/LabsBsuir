@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int NotMain()
 {
     int array[100];
     int n, i, c, ThisM;
