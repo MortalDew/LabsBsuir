@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include "LabC2General.h"
 
 int fact(int n)
 {
