@@ -12,6 +12,7 @@ int fact(int n)
 int DoLab()
 {
 	int n = 0, xn = 0; float x ; double l, y;
+	int loop =0;
 
     printf(" enter the number of row members   ");
 a:   //scanf("%d", &n);
@@ -48,8 +49,9 @@ c:      scanf("%f",&x);
 		if (x < 0.1 || x>1)
 		{
 			printf("\n");
-			printf(" error, enter right number  "); 
-			if (x>3000) break;
+			printf(" error, enter right number  ");
+			loop++;
+			if (loop>200) break;
 			goto c;
 		}
 
