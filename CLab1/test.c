@@ -3,5 +3,6 @@
 
 int main1() {
     int ThisM;
-    assert(scanf("%d", &ThisM) = "10000");
+    assert(ThisM = 10000);
+    return 0;       
 }
