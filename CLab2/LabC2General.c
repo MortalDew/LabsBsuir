@@ -8,7 +8,7 @@ int fact(int n)
 	else return n * fact(n - 1);
 }
 
-int main()
+int DoLab()
 {
 	int n = 0, xn = 0; float x ; double l, y;
 
