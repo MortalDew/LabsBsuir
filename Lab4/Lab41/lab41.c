@@ -31,10 +31,9 @@ static char* word_end(char* s) {
 int main(void) {
     char* p, * w;
     char s[256] = "app, abc, app, xyz, wolf, app.";
-    char* u = NULL;
 
     w = word_end(s);
-    p = strtok_s(s, "., ", &u);
+    p = strtok(s, "., ");
     do {
         if (strcmp(p, w) != 0 && is_sorted(p))
             puts(p);
