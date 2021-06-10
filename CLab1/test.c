@@ -1,4 +1,4 @@
-#include "CLab1.c"
+#include "CLab1.h"
 #include <cassert>
 
 int main() {
