@@ -37,6 +37,6 @@ int main(void) {
     do {
         if (strcmp(p, w) != 0 && is_sorted(p))
             puts(p);
-    } while ((p = strtok(NULL, "., ") != NULL);
+    } while ((p = strtok(NULL, "., ") && p != NULL);
     return 0;
 }
