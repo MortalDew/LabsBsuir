@@ -42,8 +42,8 @@ b:   //scanf("%d", &xn);
 		printf("0.1 ... 1" );
 		printf("\n"); 
 
-c:      //scanf("%f",&x);
-	x = 0.1;
+c:      scanf("%f",&x);
+
 
 		if (x < 0.1 || x>1)
 		{
