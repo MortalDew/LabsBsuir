@@ -51,7 +51,10 @@ c:      scanf("%f",&x);
 			printf("\n");
 			printf(" error, enter right number  ");
 			loop++;
-			if (loop>200) break;
+			if (loop>200) {
+				x= 0.2;
+				break;
+			}
 			goto c;
 		}
 
