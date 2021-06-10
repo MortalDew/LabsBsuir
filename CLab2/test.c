@@ -1,4 +1,4 @@
-#include "CLab2General.h"
+#include "LabC2General.h"
 #include <assert.h>
 
 int main(){
